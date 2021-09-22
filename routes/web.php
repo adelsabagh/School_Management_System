@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Backend\Setup\StudentClassController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +65,12 @@ Route::prefix('profile')->group(function(){
 
 });
 
+
+// User Profile And Change Password
+
+Route::prefix('setups')->group(function(){
+
+    Route::get('student/class/view', [StudentClassController::class, 'ViewStudent'])->name('student.class.view');
+    
+
+});
