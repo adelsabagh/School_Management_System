@@ -65,10 +65,10 @@
                                             <span class="input-group-text bg-transparent text-white"><i class="ti-lock"></i></span>
                                         </div>
                                         <input type="password" id="password" name="password" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Password">
-                                        @error('password')
+                                        
+                                    </div>@error('password')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
-                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group mb-3">
@@ -76,10 +76,10 @@
                                             <span class="input-group-text bg-transparent text-white"><i class="ti-lock"></i></span>
                                         </div>
                                         <input type="password" id="password_confirmation" name="password_confirmation"  class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Retype Password">
-                                        @error('password_confirmation')
+                                        
+                                    </div>@error('password_confirmation')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
-                                    </div>
                                 </div>
                                 
                                   <div class="row">

@@ -39,7 +39,9 @@
 											<span class="input-group-text bg-transparent text-white"><i class="ti-user"></i></span>
 										</div>
 										<input type="email" id="email" name="email" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Username">
-									</div>
+									</div>@error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
 								</div>
 								<div class="form-group">
 									<div class="input-group mb-3">
@@ -47,7 +49,9 @@
 											<span class="input-group-text  bg-transparent text-white"><i class="ti-lock"></i></span>
 										</div>
 										<input type="password" id="password" name="password" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Password">
-									</div>
+									</div>@error('password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
 								</div>
 								  <div class="row">
 									<div class="col-6">
