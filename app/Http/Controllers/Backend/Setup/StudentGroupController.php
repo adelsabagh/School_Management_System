@@ -36,7 +36,7 @@ class StudentGroupController extends Controller
         $data ->save();
 
         $notification = array(
-            'message' => 'Student Group Inserted Successfuly',
+            'message' => 'Student Group Inserted Successfully',
             'alert-type' => 'success'
         );
 
@@ -63,7 +63,7 @@ class StudentGroupController extends Controller
         $data ->save();
 
         $notification = array(
-            'message' => 'Student Group Updated Successfuly',
+            'message' => 'Student Group Updated Successfully',
             'alert-type' => 'success'
         );
 
@@ -76,7 +76,7 @@ class StudentGroupController extends Controller
         $user->delete();
 
         $notification = array(
-            'message' => 'Student Group Deleted Successfuly',
+            'message' => 'Student Group Deleted Successfully',
             'alert-type' => 'info'
         );
 

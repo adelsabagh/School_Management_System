@@ -49,7 +49,7 @@ class ProfileController extends Controller
 
             $data->save();
             $notification = array(
-            'message' => 'User Profile Updated Successfuly',
+            'message' => 'User Profile Updated Successfully',
             'alert-type' => 'success'
         );
             return redirect()->route('profile.view')->with($notification);

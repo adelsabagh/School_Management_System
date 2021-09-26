@@ -40,7 +40,7 @@ class UserController extends Controller
 
 
         $notification = array(
-            'message' => 'User Inserted Successfuly',
+            'message' => 'User Inserted Successfully',
             'alert-type' => 'success'
         );
 
@@ -71,7 +71,7 @@ class UserController extends Controller
 
 
         $notification = array(
-            'message' => 'User Updated Successfuly',
+            'message' => 'User Updated Successfully',
             'alert-type' => 'info'
         );
         return redirect()->route('user.view')->with($notification);
@@ -83,7 +83,7 @@ class UserController extends Controller
         $user->delete();
 
         $notification = array(
-            'message' => 'User Deleted Successfuly',
+            'message' => 'User Deleted Successfully',
             'alert-type' => 'info'
         );
 
