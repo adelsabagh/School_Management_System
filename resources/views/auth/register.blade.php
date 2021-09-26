@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../images/favicon.ico">
 
-    <title>Easy ERP - Registration </title>
+    <title>Kultur University - Registration </title>
   
     <!-- Vendors Style-->
     <link rel="stylesheet" href="{{asset('backend/css/vendors_css.css')}}">
@@ -28,8 +28,8 @@
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-4 col-md-5 col-12">
                         <div class="content-top-agile p-10">
-                            <h2 class="text-white">Get started with Us</h2>
-                            <p class="text-white-50">Register a new membership</p>                          
+                            <h2 class="text-white">Get started with <br/>Kultur University</h2>
+                            <p class="text-white-50">Register a new user</p>                          
                         </div>
                         <div class="p-30 rounded30 box-shadowed b-2 b-dashed">
                         <form method="POST" action="{{ route('register') }}">
@@ -40,15 +40,24 @@
                                             <span class="input-group-text bg-transparent text-white"><i class="ti-user"></i></span>
                                         </div>
                                         <input type="text" id="name" name="name" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Full Name">
-                                    </div>
+                                        
+                                    </div>@error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text bg-transparent text-white"><i class="ti-email"></i></span>
                                         </div>
-                                        <input type="email" id="email" name="email" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Email">
-                                    </div>
+                                        <input type="email" id="email" name="email" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Email" >
+                                        
+                
+                                        
+                                    </div>@error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group mb-3">
@@ -56,6 +65,9 @@
                                             <span class="input-group-text bg-transparent text-white"><i class="ti-lock"></i></span>
                                         </div>
                                         <input type="password" id="password" name="password" class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Password">
+                                        @error('password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -64,6 +76,9 @@
                                             <span class="input-group-text bg-transparent text-white"><i class="ti-lock"></i></span>
                                         </div>
                                         <input type="password" id="password_confirmation" name="password_confirmation"  class="form-control pl-15 bg-transparent text-white plc-white" placeholder="Retype Password">
+                                        @error('password_confirmation')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 
@@ -84,15 +99,7 @@
                                   </div>
                             </form>                                                 
 
-                            <div class="text-center text-white">
-                              <p class="mt-20">- Register With -</p>
-                              <p class="gap-items-2 mb-20">
-                                  <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-facebook"></i></a>
-                                  <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-twitter"></i></a>
-                                  <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-google-plus"></i></a>
-                                  <a class="btn btn-social-icon btn-round btn-outline btn-white" href="#"><i class="fa fa-instagram"></i></a>
-                                </p>    
-                            </div>
+                            
 
                             <div class="text-center">
                                 <p class="mt-15 mb-0 text-white">Already have an account?<a href="{{ route('login') }}" class="text-danger ml-5"> Sign In</a></p>
