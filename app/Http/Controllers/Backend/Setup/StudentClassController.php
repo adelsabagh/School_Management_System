@@ -37,7 +37,7 @@ class StudentClassController extends Controller
         $data ->save();
 
         $notification = array(
-            'message' => 'Student Class Inserted Successfuly',
+            'message' => 'Student Class Inserted Successfully',
             'alert-type' => 'success'
         );
 
@@ -64,7 +64,7 @@ class StudentClassController extends Controller
         $data ->save();
 
         $notification = array(
-            'message' => 'Student Class Updated Successfuly',
+            'message' => 'Student Class Updated Successfully',
             'alert-type' => 'success'
         );
 
@@ -77,7 +77,7 @@ class StudentClassController extends Controller
         $user->delete();
 
         $notification = array(
-            'message' => 'Student Class Deleted Successfuly',
+            'message' => 'Student Class Deleted Successfully',
             'alert-type' => 'info'
         );
 

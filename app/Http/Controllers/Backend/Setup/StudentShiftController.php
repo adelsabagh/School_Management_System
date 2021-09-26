@@ -36,7 +36,7 @@ class StudentShiftController extends Controller
         $data ->save();
 
         $notification = array(
-            'message' => 'Student Shift Inserted Successfuly',
+            'message' => 'Student Shift Inserted Successfully',
             'alert-type' => 'success'
         );
 
@@ -63,7 +63,7 @@ class StudentShiftController extends Controller
         $data ->save();
 
         $notification = array(
-            'message' => 'Student Shift Updated Successfuly',
+            'message' => 'Student Shift Updated Successfully',
             'alert-type' => 'success'
         );
 
@@ -76,7 +76,7 @@ class StudentShiftController extends Controller
         $user->delete();
 
         $notification = array(
-            'message' => 'Student Shift Deleted Successfuly',
+            'message' => 'Student Shift Deleted Successfully',
             'alert-type' => 'info'
         );
 

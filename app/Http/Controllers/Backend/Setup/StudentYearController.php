@@ -36,7 +36,7 @@ class StudentYearController extends Controller
         $data ->save();
 
         $notification = array(
-            'message' => 'Student Year Inserted Successfuly',
+            'message' => 'Student Year Inserted Successfully',
             'alert-type' => 'success'
         );
 
@@ -63,7 +63,7 @@ class StudentYearController extends Controller
         $data ->save();
 
         $notification = array(
-            'message' => 'Student Year Updated Successfuly',
+            'message' => 'Student Year Updated Successfully',
             'alert-type' => 'success'
         );
 
@@ -76,7 +76,7 @@ class StudentYearController extends Controller
         $user->delete();
 
         $notification = array(
-            'message' => 'Student Year Deleted Successfuly',
+            'message' => 'Student Year Deleted Successfully',
             'alert-type' => 'info'
         );
 
