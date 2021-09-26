@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{{asset('backend/images/favicon.ico')}}">
 
-    <title>School Managment System - Dashboard</title>
+    <title>Kultur University - Dashboard</title>
     
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="{{asset('backend/css/vendors_css.css')}}">
