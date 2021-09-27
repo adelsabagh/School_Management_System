@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend\Setup;
 use App\Http\Controllers\Controller;
 use App\Models\FeeCategory;
 use Illuminate\Http\Request;
+use App\Models\FeeCategoryAmount;
 
 class FeeCategoryController extends Controller
 {
@@ -12,6 +13,7 @@ class FeeCategoryController extends Controller
     {
 
         $data['allData'] = FeeCategory::all();
+        //$data['allData'] = FeeCategory::select('id')->groupBy('id')->get();
         return view('backend.setup.fee_category.view_fee_cat',$data);
 
 
@@ -74,6 +76,7 @@ class FeeCategoryController extends Controller
     {
         $user = FeeCategory::find($id);
         $user->delete();
+        $deleteData = FeeCategoryAmount::where('fee_category_id', $id)->delete();
 
         $notification = array(
             'message' => 'Fee Category Deleted Successfully',
