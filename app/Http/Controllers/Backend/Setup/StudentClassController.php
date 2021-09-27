@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend\Setup;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\StudentClass;
+use App\Models\FeeCategoryAmount;
 
 class StudentClassController extends Controller
 {
@@ -75,6 +76,7 @@ class StudentClassController extends Controller
     {
         $user = StudentClass::find($id);
         $user->delete();
+        $deleteData = FeeCategoryAmount::where('class_id', $id)->delete();
 
         $notification = array(
             'message' => 'Student Class Deleted Successfully',
